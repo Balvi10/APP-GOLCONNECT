@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "GolConnect",
+    "slug": "golconnect",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "golconnect",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#121414",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#121414"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.golconnect.app",
+      "newArchEnabled": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "GolConnect necesita acceso a tu galería para subir tu foto de perfil.",
+        "NSCameraUsageDescription": "GolConnect necesita acceso a la cámara para tomar tu foto de perfil."
+      }
+    },
+    "android": {
+      "package": "com.golconnect.app",
+      "newArchEnabled": true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#121414"
+      },
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-asset",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "GolConnect necesita acceso a tu galería para subir tu foto de perfil."
+        }
+      ]
+    ]
+  }
+}
